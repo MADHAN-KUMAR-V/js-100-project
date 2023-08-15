@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.magnifier{
+    width: 30px;
+    position: absolute;
+    left: 25px;
+    cursor: pointer;
+}
+.mic__icon{
+    width: 35px;
+    position: absolute;
+    right: 25px;
+    transition: width 2s;
+}
+.input{
+    position: absolute;
+    width: 250px;
+    left: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    transition: width 1s;
+}
+
+.search__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 400px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2), -6px -6px 10px rgba(0,0,0,0.2);
+    position: relative;
+    transition: width 1.5s;
+}
+
+.search__container.active{
+    width: 60px;
+}
+.active .input{
+    width: 0;
+}
+.active .mic__icon{
+    width: 0;
+}
+.active .magnifier{
+    left: 16px;
+}
